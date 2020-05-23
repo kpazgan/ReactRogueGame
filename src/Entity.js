@@ -6,10 +6,14 @@ class Entity {
         this.attributes = { ...attributes };
     }
 
+    action(verb, world) {
+        console.log(`Verb: ${verb}`);
+    }
+
     draw(context) {
         context.fillStyle = this.attributes.color || "white";
         context.textBaseline = "hanging";
-        context.font = "16px Heveltica";
+        context.font = "16px Helvetica";
         context.fillText(
             this.attributes.ascii,
             this.x * this.size +
